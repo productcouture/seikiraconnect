@@ -66,7 +66,7 @@ class ScrollAnimationController {
     fadeElements.forEach(el => {
       el.style.opacity = '0';
       el.style.transform = 'translateY(30px)';
-      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      el.style.transition = 'opacity 1.2s ease, transform 1.2s ease';
       fadeObserver.observe(el);
     });
 
@@ -96,14 +96,14 @@ class ScrollAnimationController {
     slideLeftElements.forEach(el => {
       el.style.opacity = '0';
       el.style.transform = 'translateX(-50px)';
-      el.style.transition = 'opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+      el.style.transition = 'opacity 1.4s cubic-bezier(0.4, 0, 0.2, 1), transform 1.4s cubic-bezier(0.4, 0, 0.2, 1)';
       slideObserver.observe(el);
     });
 
     slideRightElements.forEach(el => {
       el.style.opacity = '0';
       el.style.transform = 'translateX(50px)';
-      el.style.transition = 'opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+      el.style.transition = 'opacity 1.4s cubic-bezier(0.4, 0, 0.2, 1), transform 1.4s cubic-bezier(0.4, 0, 0.2, 1)';
       slideObserver.observe(el);
     });
 
@@ -209,7 +209,7 @@ class ScrollAnimationController {
             setTimeout(() => {
               child.style.opacity = '1';
               child.style.transform = 'translateY(0)';
-            }, index * 100); // 100ms stagger delay
+            }, index * 200); // 200ms stagger delay (slower)
           });
         }
       });
@@ -220,7 +220,7 @@ class ScrollAnimationController {
       children.forEach(child => {
         child.style.opacity = '0';
         child.style.transform = 'translateY(20px)';
-        child.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        child.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
       });
       staggerObserver.observe(container);
     });

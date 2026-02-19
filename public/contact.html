@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Seikira</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body style="background: #0a0a0c; color: #f5f3ef;">
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress"></div>
+
+  <!-- Navigation Header -->
+  <header style="position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(10, 10, 12, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(42, 157, 143, 0.1); padding: 20px 0;">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center;">
+      <a href="/" style="font-size: 24px; font-weight: 700; color: #f5f3ef; text-decoration: none;">
+        Seikira <span style="color: #2a9d8f;">by Product Couture</span>
+      </a>
+      <nav style="display: flex; gap: 32px;">
+        <a href="/" style="color: rgba(245, 243, 239, 0.7); text-decoration: none; transition: color 0.3s;">Home</a>
+        <a href="/product-couture.html" style="color: rgba(245, 243, 239, 0.7); text-decoration: none; transition: color 0.3s;">Product Couture</a>
+        <a href="/services.html" style="color: rgba(245, 243, 239, 0.7); text-decoration: none; transition: color 0.3s;">Services</a>
+        <a href="/about.html" style="color: rgba(245, 243, 239, 0.7); text-decoration: none; transition: color 0.3s;">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main style="padding-top: 100px;">
+    
+    <!-- Hero Section -->
+    <section style="min-height: 50vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 80px 24px; background: radial-gradient(circle at center, rgba(42, 157, 143, 0.1) 0%, transparent 70%);">
+      <div style="max-width: 900px;">
+        <h1 class="fade-in" style="font-size: 56px; font-weight: 700; margin-bottom: 24px; background: linear-gradient(135deg, #2a9d8f 0%, #d4af37 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+          Let's Transform Workforce Development Together
+        </h1>
+        <p class="fade-in" style="font-size: 20px; color: rgba(245, 243, 239, 0.7); max-width: 700px; margin: 0 auto; line-height: 1.8;">
+          Ready to build scalable mobility systems? Get in touch with our team to discuss your needs.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Form & Info -->
+    <section style="padding: 80px 24px 120px;">
+      <div style="max-width: 1280px; margin: 0 auto;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;">
+          
+          <!-- Contact Form -->
+          <div class="glass slide-left" style="padding: 48px; border-radius: 24px;">
+            <h2 style="font-size: 32px; margin-bottom: 8px;">Send Us a Message</h2>
+            <p style="font-size: 16px; color: rgba(245, 243, 239, 0.6); margin-bottom: 32px;">Fill out the form and we'll get back to you within 24 hours.</p>
+            
+            <form id="contactForm" style="display: flex; flex-direction: column; gap: 24px;">
+              
+              <!-- Name Input -->
+              <div class="form-group">
+                <label for="name" style="display: block; font-size: 14px; font-weight: 600; color: #2a9d8f; margin-bottom: 8px;">
+                  Full Name *
+                </label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  name="name" 
+                  required
+                  class="form-input"
+                  placeholder="John Doe"
+                  style="width: 100%; padding: 14px 16px; background: rgba(245, 243, 239, 0.05); border: 2px solid rgba(42, 157, 143, 0.2); border-radius: 8px; color: #f5f3ef; font-size: 16px; font-family: 'Inter', sans-serif; transition: all 0.3s ease;"
+                />
+              </div>
+
+              <!-- Email Input -->
+              <div class="form-group">
+                <label for="email" style="display: block; font-size: 14px; font-weight: 600; color: #2a9d8f; margin-bottom: 8px;">
+                  Email Address *
+                </label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  required
+                  class="form-input"
+                  placeholder="john@example.com"
+                  style="width: 100%; padding: 14px 16px; background: rgba(245, 243, 239, 0.05); border: 2px solid rgba(42, 157, 143, 0.2); border-radius: 8px; color: #f5f3ef; font-size: 16px; font-family: 'Inter', sans-serif; transition: all 0.3s ease;"
+                />
+              </div>
+
+              <!-- Organization Input -->
+              <div class="form-group">
+                <label for="organization" style="display: block; font-size: 14px; font-weight: 600; color: #2a9d8f; margin-bottom: 8px;">
+                  Organization
+                </label>
+                <input 
+                  type="text" 
+                  id="organization" 
+                  name="organization"
+                  class="form-input"
+                  placeholder="Your Organization"
+                  style="width: 100%; padding: 14px 16px; background: rgba(245, 243, 239, 0.05); border: 2px solid rgba(42, 157, 143, 0.2); border-radius: 8px; color: #f5f3ef; font-size: 16px; font-family: 'Inter', sans-serif; transition: all 0.3s ease;"
+                />
+              </div>
+
+              <!-- Inquiry Type -->
+              <div class="form-group">
+                <label for="inquiryType" style="display: block; font-size: 14px; font-weight: 600; color: #2a9d8f; margin-bottom: 8px;">
+                  Inquiry Type *
+                </label>
+                <select 
+                  id="inquiryType" 
+                  name="inquiryType" 
+                  required
+                  class="form-input"
+                  style="width: 100%; padding: 14px 16px; background: rgba(245, 243, 239, 0.05); border: 2px solid rgba(42, 157, 143, 0.2); border-radius: 8px; color: #f5f3ef; font-size: 16px; font-family: 'Inter', sans-serif; transition: all 0.3s ease;"
+                >
+                  <option value="">Select an option</option>
+                  <option value="demo">Request a Demo</option>
+                  <option value="partnership">Partnership Inquiry</option>
+                  <option value="enterprise">Enterprise Access</option>
+                  <option value="support">Technical Support</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <!-- Message Input -->
+              <div class="form-group">
+                <label for="message" style="display: block; font-size: 14px; font-weight: 600; color: #2a9d8f; margin-bottom: 8px;">
+                  Message *
+                </label>
+                <textarea 
+                  id="message" 
+                  name="message" 
+                  required
+                  rows="6"
+                  class="form-input"
+                  placeholder="Tell us about your needs..."
+                  style="width: 100%; padding: 14px 16px; background: rgba(245, 243, 239, 0.05); border: 2px solid rgba(42, 157, 143, 0.2); border-radius: 8px; color: #f5f3ef; font-size: 16px; font-family: 'Inter', sans-serif; resize: vertical; transition: all 0.3s ease;"
+                ></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <button 
+                type="submit" 
+                class="magnetic-btn submit-btn"
+                style="padding: 16px 32px; background: linear-gradient(135deg, #2a9d8f 0%, #1e847a 100%); color: #fff; border: none; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 20px rgba(42, 157, 143, 0.3);"
+              >
+                Send Message
+              </button>
+
+              <!-- Success Message -->
+              <div id="successMessage" style="display: none; padding: 16px; background: rgba(42, 157, 143, 0.2); border: 2px solid #2a9d8f; border-radius: 8px; color: #2a9d8f; text-align: center;">
+                ✓ Message sent successfully! We'll get back to you soon.
+              </div>
+
+            </form>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="slide-right">
+            
+            <!-- Quick Contact Cards -->
+            <div class="stagger-container" style="display: flex; flex-direction: column; gap: 24px; margin-bottom: 40px;">
+              
+              <div class="glass stagger-item" style="padding: 32px; border-radius: 16px; border-left: 3px solid #2a9d8f;">
+                <div style="font-size: 32px; margin-bottom: 12px;">📧</div>
+                <h3 style="font-size: 18px; margin-bottom: 8px; color: #2a9d8f;">Email Us</h3>
+                <a href="mailto:hello@seikira.com" style="color: rgba(245, 243, 239, 0.7); text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 14px;">
+                  hello@seikira.com
+                </a>
+              </div>
+
+              <div class="glass stagger-item" style="padding: 32px; border-radius: 16px; border-left: 3px solid #d4af37;">
+                <div style="font-size: 32px; margin-bottom: 12px;">💼</div>
+                <h3 style="font-size: 18px; margin-bottom: 8px; color: #d4af37;">Enterprise Sales</h3>
+                <a href="mailto:enterprise@seikira.com" style="color: rgba(245, 243, 239, 0.7); text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 14px;">
+                  enterprise@seikira.com
+                </a>
+              </div>
+
+              <div class="glass stagger-item" style="padding: 32px; border-radius: 16px; border-left: 3px solid #2a9d8f;">
+                <div style="font-size: 32px; margin-bottom: 12px;">🤝</div>
+                <h3 style="font-size: 18px; margin-bottom: 8px; color: #2a9d8f;">Partnerships</h3>
+                <a href="mailto:partners@seikira.com" style="color: rgba(245, 243, 239, 0.7); text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 14px;">
+                  partners@seikira.com
+                </a>
+              </div>
+
+            </div>
+
+            <!-- Office Info -->
+            <div class="glass fade-in" style="padding: 32px; border-radius: 16px; background: linear-gradient(135deg, rgba(42, 157, 143, 0.1) 0%, rgba(212, 175, 55, 0.05) 100%);">
+              <h3 style="font-size: 24px; margin-bottom: 20px;">Office Hours</h3>
+              <div style="font-size: 16px; color: rgba(245, 243, 239, 0.7); line-height: 2;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 12px;">
+                  <span>Monday - Friday</span>
+                  <span style="font-family: 'JetBrains Mono', monospace; color: #2a9d8f;">9:00 AM - 6:00 PM EST</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 12px;">
+                  <span>Saturday</span>
+                  <span style="font-family: 'JetBrains Mono', monospace; color: #2a9d8f;">10:00 AM - 4:00 PM EST</span>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                  <span>Sunday</span>
+                  <span style="font-family: 'JetBrains Mono', monospace; color: rgba(245, 243, 239, 0.5);">Closed</span>
+                </div>
+              </div>
+              <div style="margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(42, 157, 143, 0.2); font-size: 14px; color: rgba(245, 243, 239, 0.6);">
+                ⚡ Average response time: <strong style="color: #2a9d8f;">2-4 hours</strong>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section style="padding: 80px 24px 120px; background: linear-gradient(180deg, rgba(42, 157, 143, 0.05) 0%, transparent 100%);">
+      <div style="max-width: 900px; margin: 0 auto;">
+        <h2 class="reveal-text" style="font-size: 42px; text-align: center; margin-bottom: 60px;">Frequently Asked Questions</h2>
+        
+        <div class="stagger-container" style="display: flex; flex-direction: column; gap: 20px;">
+          
+          <div class="glass stagger-item faq-item" style="padding: 32px; border-radius: 12px; cursor: pointer; transition: all 0.3s ease;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <h3 style="font-size: 18px; color: #2a9d8f;">How quickly can we get started with Seikira?</h3>
+              <span style="font-size: 24px; color: #2a9d8f; transition: transform 0.3s ease;">+</span>
+            </div>
+            <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease;">
+              <p style="margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(42, 157, 143, 0.2); color: rgba(245, 243, 239, 0.7); line-height: 1.7;">
+                Most organizations can launch within 2-4 weeks. We provide white-glove onboarding, data migration support, and training for your team.
+              </p>
+            </div>
+          </div>
+
+          <div class="glass stagger-item faq-item" style="padding: 32px; border-radius: 12px; cursor: pointer; transition: all 0.3s ease;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <h3 style="font-size: 18px; color: #2a9d8f;">What kind of data security do you provide?</h3>
+              <span style="font-size: 24px; color: #2a9d8f; transition: transform 0.3s ease;">+</span>
+            </div>
+            <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease;">
+              <p style="margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(42, 157, 143, 0.2); color: rgba(245, 243, 239, 0.7); line-height: 1.7;">
+                Enterprise-grade security with SOC 2 compliance, end-to-end encryption, role-based access control, and regular security audits. Your data is protected at every layer.
+              </p>
+            </div>
+          </div>
+
+          <div class="glass stagger-item faq-item" style="padding: 32px; border-radius: 12px; cursor: pointer; transition: all 0.3s ease;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <h3 style="font-size: 18px; color: #2a9d8f;">Can Seikira integrate with our existing systems?</h3>
+              <span style="font-size: 24px; color: #2a9d8f; transition: transform 0.3s ease;">+</span>
+            </div>
+            <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease;">
+              <p style="margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(42, 157, 143, 0.2); color: rgba(245, 243, 239, 0.7); line-height: 1.7;">
+                Yes. Seikira offers API-first architecture with pre-built integrations for major LMS, HRIS, and ATS platforms. Custom integrations available for enterprise clients.
+              </p>
+            </div>
+          </div>
+
+          <div class="glass stagger-item faq-item" style="padding: 32px; border-radius: 12px; cursor: pointer; transition: all 0.3s ease;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <h3 style="font-size: 18px; color: #2a9d8f;">What's included in enterprise support?</h3>
+              <span style="font-size: 24px; color: #2a9d8f; transition: transform 0.3s ease;">+</span>
+            </div>
+            <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease;">
+              <p style="margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(42, 157, 143, 0.2); color: rgba(245, 243, 239, 0.7); line-height: 1.7;">
+                Dedicated account manager, priority support (2-hour SLA), custom training sessions, quarterly business reviews, and access to our product roadmap input process.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer style="padding: 40px 24px; border-top: 1px solid rgba(42, 157, 143, 0.1); text-align: center;">
+    <div style="max-width: 1280px; margin: 0 auto;">
+      <p style="color: rgba(245, 243, 239, 0.5); font-size: 14px;">
+        © 2025 Product Couture. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script src="/static/scroll-animations.js"></script>
+  <script src="/static/page-router.js"></script>
+  <script src="/static/sound-effects.js"></script>
+
+  <script>
+    // Form Input Animations
+    document.querySelectorAll('.form-input').forEach(input => {
+      input.addEventListener('focus', function() {
+        this.style.borderColor = '#2a9d8f';
+        this.style.boxShadow = '0 0 0 3px rgba(42, 157, 143, 0.1)';
+      });
+      
+      input.addEventListener('blur', function() {
+        this.style.borderColor = 'rgba(42, 157, 143, 0.2)';
+        this.style.boxShadow = 'none';
+      });
+    });
+
+    // Form Submission
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const btn = this.querySelector('.submit-btn');
+      const successMsg = document.getElementById('successMessage');
+      
+      // Disable button
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+      btn.style.opacity = '0.7';
+      
+      // Simulate form submission (replace with actual API call)
+      setTimeout(() => {
+        // Show success message
+        successMsg.style.display = 'block';
+        successMsg.style.animation = 'slideIn 0.5s ease';
+        
+        // Reset form
+        this.reset();
+        
+        // Re-enable button
+        btn.disabled = false;
+        btn.textContent = 'Send Message';
+        btn.style.opacity = '1';
+        
+        // Hide success message after 5 seconds
+        setTimeout(() => {
+          successMsg.style.display = 'none';
+        }, 5000);
+      }, 1500);
+    });
+
+    // FAQ Accordion
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.addEventListener('click', function() {
+        const answer = this.querySelector('.faq-answer');
+        const icon = this.querySelector('span');
+        const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
+        
+        // Close all other items
+        document.querySelectorAll('.faq-item').forEach(otherItem => {
+          if (otherItem !== this) {
+            otherItem.querySelector('.faq-answer').style.maxHeight = '0';
+            otherItem.querySelector('span').style.transform = 'rotate(0deg)';
+            otherItem.querySelector('span').textContent = '+';
+          }
+        });
+        
+        // Toggle current item
+        if (isOpen) {
+          answer.style.maxHeight = '0';
+          icon.style.transform = 'rotate(0deg)';
+          icon.textContent = '+';
+        } else {
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+          icon.style.transform = 'rotate(45deg)';
+          icon.textContent = '×';
+        }
+      });
+    });
+  </script>
+
+  <style>
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .faq-item:hover {
+      border-color: rgba(42, 157, 143, 0.3);
+      transform: translateX(4px);
+    }
+
+    .submit-btn:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 30px rgba(42, 157, 143, 0.4);
+    }
+
+    @media (max-width: 768px) {
+      main section > div[style*="grid-template-columns: 1fr 1fr"] {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  </style>
+
+</body>
+</html>
