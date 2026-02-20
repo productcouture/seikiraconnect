@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enterprise Infrastructure | Seikira</title>
+  <meta name="description" content="SOC 2-aligned, multi-tenant workforce intelligence infrastructure built for scale. API-first architecture, hierarchical tenancy, and enterprise-grade security.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body style="background: #0a0a0c; color: #f5f3ef;">
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress"></div>
+
+  <!-- Navigation Header -->
+  <header style="position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(10, 10, 12, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(42, 157, 143, 0.1); padding: 20px 0;">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center;">
+      <a href="/" style="font-size: 24px; font-weight: 700; color: #f5f3ef; text-decoration: none;">
+        Seikira
+      </a>
+      <nav style="display: flex; gap: 32px; align-items: center;">
+        <a href="/kinect" style="color: rgba(245, 243, 239, 0.7); text-decoration: none; transition: color 0.3s;">Kinect</a>
+        <a href="/enterprise" style="color: #2a9d8f; text-decoration: none; transition: color 0.3s; font-weight: 600;">Enterprise</a>
+        <a href="/security" style="color: rgba(245, 243, 239, 0.7); text-decoration: none; transition: color 0.3s;">Security</a>
+        <a href="/about" style="color: rgba(245, 243, 239, 0.7); text-decoration: none; transition: color 0.3s;">About</a>
+        <a href="/contact" class="magnetic-btn" style="padding: 10px 24px; background: linear-gradient(135deg, #2a9d8f 0%, #1e847a 100%); color: #fff; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 14px;">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main style="padding-top: 100px;">
+    
+    <!-- HERO SECTION -->
+    <section style="min-height: 80vh; display: flex; align-items: center; justify-content: center; padding: 80px 24px; background: radial-gradient(circle at center, rgba(42, 157, 143, 0.15) 0%, transparent 60%);">
+      <div style="max-width: 1100px; text-align: center;">
+        
+        <div class="fade-in" style="display: inline-block; padding: 8px 20px; background: rgba(42, 157, 143, 0.15); border: 1px solid rgba(42, 157, 143, 0.3); border-radius: 24px; font-size: 13px; font-weight: 600; color: #2a9d8f; margin-bottom: 32px; letter-spacing: 0.5px;">
+          ENTERPRISE INFRASTRUCTURE
+        </div>
+        
+        <h1 class="fade-in" style="font-size: 72px; font-weight: 700; line-height: 1.1; margin-bottom: 32px;">
+          Infrastructure Built<br>
+          for <span style="background: linear-gradient(135deg, #2a9d8f 0%, #d4af37 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Enterprise Scale</span>
+        </h1>
+        
+        <p class="fade-in" style="font-size: 24px; color: rgba(245, 243, 239, 0.8); line-height: 1.6; margin-bottom: 48px; max-width: 900px; margin-left: auto; margin-right: auto;">
+          SOC 2-aligned, multi-tenant architecture with API-first design, hierarchical tenancy, and enterprise-grade security. Built to scale from 1,000 to 1,000,000 users.
+        </p>
+
+        <!-- Quick Stats -->
+        <div class="fade-in stagger-container" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; max-width: 1000px; margin: 0 auto 60px;">
+          
+          <div class="glass stagger-item" style="padding: 32px 24px; border-radius: 12px; text-align: center; border-top: 3px solid #2a9d8f;">
+            <div style="font-size: 42px; font-weight: 700; color: #2a9d8f; font-family: 'JetBrains Mono', monospace; margin-bottom: 8px;">99.99%</div>
+            <div style="font-size: 14px; color: rgba(245, 243, 239, 0.6);">Uptime SLA</div>
+          </div>
+
+          <div class="glass stagger-item" style="padding: 32px 24px; border-radius: 12px; text-align: center; border-top: 3px solid #d4af37;">
+            <div style="font-size: 42px; font-weight: 700; color: #d4af37; font-family: 'JetBrains Mono', monospace; margin-bottom: 8px;">&lt;200ms</div>
+            <div style="font-size: 14px; color: rgba(245, 243, 239, 0.6);">API Response</div>
+          </div>
+
+          <div class="glass stagger-item" style="padding: 32px 24px; border-radius: 12px; text-align: center; border-top: 3px solid #2a9d8f;">
+            <div style="font-size: 42px; font-weight: 700; color: #2a9d8f; font-family: 'JetBrains Mono', monospace; margin-bottom: 8px;">SOC 2</div>
+            <div style="font-size: 14px; color: rgba(245, 243, 239, 0.6);">Type II Compliant</div>
+          </div>
+
+          <div class="glass stagger-item" style="padding: 32px 24px; border-radius: 12px; text-align: center; border-top: 3px solid #d4af37;">
+            <div style="font-size: 42px; font-weight: 700; color: #d4af37; font-family: 'JetBrains Mono', monospace; margin-bottom: 8px;">24/7</div>
+            <div style="font-size: 14px; color: rgba(245, 243, 239, 0.6);">Support</div>
+          </div>
+
+        </div>
+
+        <div class="fade-in" style="margin-top: 48px;">
+          <a href="/contact" class="magnetic-btn" style="display: inline-block; padding: 18px 40px; background: linear-gradient(135deg, #2a9d8f 0%, #1e847a 100%); color: #fff; text-decoration: none; border-radius: 10px; font-weight: 600; font-size: 16px; box-shadow: 0 8px 24px rgba(42, 157, 143, 0.3); margin-right: 16px;">
+            Request Enterprise Demo
+          </a>
+          <a href="/security" class="magnetic-btn" style="display: inline-block; padding: 18px 40px; background: transparent; color: #2a9d8f; text-decoration: none; border-radius: 10px; font-weight: 600; font-size: 16px; border: 2px solid #2a9d8f;">
+            View Security Details
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ARCHITECTURE OVERVIEW -->
+    <section style="padding: 120px 24px; background: linear-gradient(180deg, rgba(42, 157, 143, 0.03) 0%, transparent 100%);">
+      <div style="max-width: 1280px; margin: 0 auto;">
+        <div style="text-align: center; margin-bottom: 80px;">
+          <h2 class="reveal-text" style="font-size: 48px; font-weight: 700; margin-bottom: 24px;">
+            Multi-Tenant Architecture
+          </h2>
+          <p class="fade-in" style="font-size: 20px; color: rgba(245, 243, 239, 0.7); max-width: 800px; margin: 0 auto;">
+            Hierarchical tenancy model with complete data isolation, role-based access control, and unified administration.
+          </p>
+        </div>
+
+        <div class="stagger-container" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;">
+          
+          <!-- Tenant Isolation -->
+          <div class="glass stagger-item slide-left" style="padding: 40px; border-radius: 16px; border-left: 3px solid #2a9d8f;">
+            <div style="font-size: 48px; margin-bottom: 20px;">🏢</div>
+            <h3 style="font-size: 22px; color: #2a9d8f; margin-bottom: 16px; font-weight: 600;">Complete Tenant Isolation</h3>
+            <p style="font-size: 15px; color: rgba(245, 243, 239, 0.7); line-height: 1.7; margin-bottom: 20px;">
+              Database-level isolation ensures your data never touches another organization's environment.
+            </p>
+            <ul style="list-style: none; padding: 0;">
+              <li style="font-size: 14px; color: rgba(245, 243, 239, 0.6); margin-bottom: 8px; padding-left: 20px; position: relative;">
+                <span style="position: absolute; left: 0; color: #2a9d8f;">✓</span> Schema-per-tenant architecture
+              </li>
+              <li style="font-size: 14px; color: rgba(245, 243, 239, 0.6); margin-bottom: 8px; padding-left: 20px; position: relative;">
+                <span style="position: absolute; left: 0; color: #2a9d8f;">✓</span> Encrypted data at rest and in transit
+              </li>
+              <li style="font-size: 14px; color: rgba(245, 243, 239, 0.6); margin-bottom: 8px; padding-left: 20px; position: relative;">
+                <span style="position: absolute; left: 0; color: #2a9d8f;">✓</span> Audit logs per tenant
+              </li>
+              <li style="font-size: 14px; color: rgba(245, 243, 239, 0.6); margin-bottom: 8px; padding-left: 20px; position: relative;">
+                <span style="position: absolute; left: 0; color: #2a9d8f;">✓</span> Independent backup schedules
+              </li>
+            </ul>
+          </div>
+
+          <!-- Hierarchical Structure -->
+          <div class="glass stagger-item fade-in" style="padding: 40px; border-radius: 16px; border-left: 3px solid #d4af37;">
+            <div style="font-size: 48px; margin-bottom: 20px;">🔗</div>
+            <h3 style="font-size: 22px; color: #d4af37; margin-bottom: 16px; font-weight: 600;">Hierarchical Tenancy</h3>
+            <p style="font-size: 15px; color: rgba(245, 243, 239, 0.7); line-height: 1.7; margin-bottom: 20px;">
+              Support complex organizational structures with parent-child relationships.
+            </p>
+            <ul style="list-style: none; padding: 0;">
+              <li style="font-size: 14px; color: rgba(245, 243, 239, 0.6); margin-bottom: 8px; padding-left: 20px; position: relative;">
+                <span style="position: absolute; left: 0; color: #d4af37;">✓</span> Multi-level org structures
+              </li>
+              <li style="font-size: 14px; color: rgba(245, 243, 239, 0.6); margin-bottom: 8px; padding-left: 20px; position: relative;">
+                <span style="position: absolute; left: 0; color: #d4af37;">✓</span> Inherited permissions
+              </li>
+              <li style="font-size: 14px; color: rgba(245, 243, 239, 0.6); margin-bottom: 8px; padding-left: 20px; position: relative;">
+                <span style="position: absolute; left: 0; color: #d4af37;">✓</span> Aggregated reporting
+              </li>
+              <li style="font-size: 14px; color: rgba(245, 243, 239, 0.6); margin-bottom: 8px; padding-left: 20px; position: relative;">
+                <span style="position: absolute; left: 0; color: #d4af37;">✓</span> Shared resources management
+              </li>
+            </ul>
+          </div>
+
+          <!-- RBAC -->
+          <div class="glass stagger-item slide-right" style="padding: 40px; border-radius: 16px; border-left: 3px solid #2a9d8f;">
+            <div style="font-size: 48px; margin-bottom: 20px;">🔐</div>
+            <h3 style="font-size: 22px; color: #2a9d8f; margin-bottom: 16px; font-weight: 600;">Role-Based Access Control</h3>
+            <p style="font-size: 15px; color: rgba(245, 243, 239, 0.7); line-height: 1.7; margin-bottom: 20px;">
+              Granular permission system with customizable roles and access policies.
+            </p>
+            <ul style="list-style: none; padding: 0;">
+              <li style="font-size: 14px; color: rgba(245, 243, 239, 0.6); margin-bottom: 8px; padding-left: 20px; position: relative;">
+                <span style="position: absolute; left: 0; color: #2a9d8f;">✓</span> Custom role definitions
+              </li>
+              <li style="font-size: 14px; color: rgba(245, 243, 239, 0.6); margin-bottom: 8px; padding-left: 20px; position: relative;">
+                <span style="position: absolute; left: 0; color: #2a9d8f;">✓</span> Resource-level permissions
+              </li>
+              <li style="font-size: 14px; color: rgba(245, 243, 239, 0.6); margin-bottom: 8px; padding-left: 20px; position: relative;">
+                <span style="position: absolute; left: 0; color: #2a9d8f;">✓</span> Conditional access policies
+              </li>
+              <li style="font-size: 14px; color: rgba(245, 243, 239, 0.6); margin-bottom: 8px; padding-left: 20px; position: relative;">
+                <span style="position: absolute; left: 0; color: #2a9d8f;">✓</span> Activity-based monitoring
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- API-FIRST DESIGN -->
+    <section style="padding: 120px 24px;">
+      <div style="max-width: 1280px; margin: 0 auto;">
+        <div style="text-align: center; margin-bottom: 80px;">
+          <span class="section-badge" style="display: inline-block; padding: 8px 20px; background: rgba(42, 157, 143, 0.1); border: 1px solid #2a9d8f; border-radius: 20px; font-size: 14px; font-weight: 600; color: #2a9d8f; margin-bottom: 16px;">DEVELOPER-FIRST</span>
+          <h2 class="reveal-text" style="font-size: 48px; font-weight: 700; margin-bottom: 24px;">
+            RESTful API Architecture
+          </h2>
+          <p class="fade-in" style="font-size: 20px; color: rgba(245, 243, 239, 0.7); max-width: 800px; margin: 0 auto;">
+            Comprehensive API endpoints for every platform capability. Build custom integrations, automate workflows, and extend functionality.
+          </p>
+        </div>
+
+        <!-- API Features Grid -->
+        <div class="stagger-container" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; margin-bottom: 60px;">
+          
+          <div class="glass stagger-item" style="padding: 40px; border-radius: 16px;">
+            <h3 style="font-size: 22px; color: #2a9d8f; margin-bottom: 16px;">🔌 Complete API Coverage</h3>
+            <p style="font-size: 15px; color: rgba(245, 243, 239, 0.7); line-height: 1.7; margin-bottom: 20px;">
+              Every UI feature is available via API. Build headless implementations or custom frontends.
+            </p>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: rgba(245, 243, 239, 0.6); background: rgba(0, 0, 0, 0.3); padding: 16px; border-radius: 8px; border-left: 3px solid #2a9d8f;">
+              GET /api/v1/participants/{id}/readiness<br>
+              POST /api/v1/credentials/issue<br>
+              GET /api/v1/analytics/cohort/{id}<br>
+              POST /api/v1/matching/suggest
+            </div>
+          </div>
+
+          <div class="glass stagger-item" style="padding: 40px; border-radius: 16px;">
+            <h3 style="font-size: 22px; color: #d4af37; margin-bottom: 16px;">📚 Comprehensive Documentation</h3>
+            <p style="font-size: 15px; color: rgba(245, 243, 239, 0.7); line-height: 1.7; margin-bottom: 20px;">
+              Interactive API docs, SDKs, and code samples for rapid integration.
+            </p>
+            <ul style="list-style: none; padding: 0; font-size: 14px; color: rgba(245, 243, 239, 0.6);">
+              <li style="margin-bottom: 8px; padding-left: 20px; position: relative;">
+                <span style="position: absolute; left: 0; color: #d4af37;">✓</span> OpenAPI 3.0 specification
+              </li>
+              <li style="margin-bottom: 8px; padding-left: 20px; position: relative;">
+                <span style="position: absolute; left: 0; color: #d4af37;">✓</span> JavaScript, Python, Ruby SDKs
+              </li>
+              <li style="margin-bottom: 8px; padding-left: 20px; position: relative;">
+                <span style="position: absolute; left: 0; color: #d4af37;">✓</span> Postman collections
+              </li>
+              <li style="margin-bottom: 8px; padding-left: 20px; position: relative;">
+                <span style="position: absolute; left: 0; color: #d4af37;">✓</span> Sandbox environment
+              </li>
+            </ul>
+          </div>
+
+          <div class="glass stagger-item" style="padding: 40px; border-radius: 16px;">
+            <h3 style="font-size: 22px; color: #2a9d8f; margin-bottom: 16px;">⚡ Webhooks & Events</h3>
+            <p style="font-size: 15px; color: rgba(245, 243, 239, 0.7); line-height: 1.7; margin-bottom: 20px;">
+              Real-time notifications for key events in your workforce pipeline.
+            </p>
+            <ul style="list-style: none; padding: 0; font-size: 14px; color: rgba(245, 243, 239, 0.6);">
+              <li style="margin-bottom: 8px; padding-left: 20px; position: relative;">
+                <span style="position: absolute; left: 0; color: #2a9d8f;">✓</span> Participant enrollment
+              </li>
+              <li style="margin-bottom: 8px; padding-left: 20px; position: relative;">
+                <span style="position: absolute; left: 0; color: #2a9d8f;">✓</span> Credential issuance
+              </li>
+              <li style="margin-bottom: 8px; padding-left: 20px; position: relative;">
+                <span style="position: absolute; left: 0; color: #2a9d8f;">✓</span> Employment placement
+              </li>
+              <li style="margin-bottom: 8px; padding-left: 20px; position: relative;">
+                <span style="position: absolute; left: 0; color: #2a9d8f;">✓</span> Retention milestones
+              </li>
+            </ul>
+          </div>
+
+          <div class="glass stagger-item" style="padding: 40px; border-radius: 16px;">
+            <h3 style="font-size: 22px; color: #d4af37; margin-bottom: 16px;">🔄 Bulk Operations</h3>
+            <p style="font-size: 15px; color: rgba(245, 243, 239, 0.7); line-height: 1.7; margin-bottom: 20px;">
+              Efficiently handle large datasets with batch processing endpoints.
+            </p>
+            <ul style="list-style: none; padding: 0; font-size: 14px; color: rgba(245, 243, 239, 0.6);">
+              <li style="margin-bottom: 8px; padding-left: 20px; position: relative;">
+                <span style="position: absolute; left: 0; color: #d4af37;">✓</span> Batch participant import
+              </li>
+              <li style="margin-bottom: 8px; padding-left: 20px; position: relative;">
+                <span style="position: absolute; left: 0; color: #d4af37;">✓</span> Async processing
+              </li>
+              <li style="margin-bottom: 8px; padding-left: 20px; position: relative;">
+                <span style="position: absolute; left: 0; color: #d4af37;">✓</span> Status polling
+              </li>
+              <li style="margin-bottom: 8px; padding-left: 20px; position: relative;">
+                <span style="position: absolute; left: 0; color: #d4af37;">✓</span> Error recovery
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- INTEGRATIONS -->
+    <section style="padding: 120px 24px; background: linear-gradient(180deg, rgba(42, 157, 143, 0.03) 0%, transparent 100%);">
+      <div style="max-width: 1280px; margin: 0 auto;">
+        <div style="text-align: center; margin-bottom: 80px;">
+          <h2 class="reveal-text" style="font-size: 48px; font-weight: 700; margin-bottom: 24px;">
+            Enterprise Integrations
+          </h2>
+          <p class="fade-in" style="font-size: 20px; color: rgba(245, 243, 239, 0.7); max-width: 800px; margin: 0 auto;">
+            Seamlessly connect with your existing enterprise systems and identity providers.
+          </p>
+        </div>
+
+        <div class="stagger-container" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;">
+          
+          <!-- SSO -->
+          <div class="glass stagger-item" style="padding: 40px; border-radius: 16px; text-align: center; border-top: 3px solid #2a9d8f;">
+            <div style="font-size: 48px; margin-bottom: 20px;">🔑</div>
+            <h3 style="font-size: 20px; color: #2a9d8f; margin-bottom: 16px; font-weight: 600;">Single Sign-On (SSO)</h3>
+            <p style="font-size: 14px; color: rgba(245, 243, 239, 0.6); line-height: 1.6; margin-bottom: 16px;">
+              SAML 2.0 and OAuth 2.0 support for seamless authentication.
+            </p>
+            <div style="font-size: 13px; color: rgba(245, 243, 239, 0.5);">
+              Okta • Azure AD • OneLogin • Auth0
+            </div>
+          </div>
+
+          <!-- HRIS -->
+          <div class="glass stagger-item" style="padding: 40px; border-radius: 16px; text-align: center; border-top: 3px solid #d4af37;">
+            <div style="font-size: 48px; margin-bottom: 20px;">👥</div>
+            <h3 style="font-size: 20px; color: #d4af37; margin-bottom: 16px; font-weight: 600;">HRIS Sync</h3>
+            <p style="font-size: 14px; color: rgba(245, 243, 239, 0.6); line-height: 1.6; margin-bottom: 16px;">
+              Bidirectional sync with HR information systems.
+            </p>
+            <div style="font-size: 13px; color: rgba(245, 243, 239, 0.5);">
+              Workday • BambooHR • ADP • Namely
+            </div>
+          </div>
+
+          <!-- ATS -->
+          <div class="glass stagger-item" style="padding: 40px; border-radius: 16px; text-align: center; border-top: 3px solid #2a9d8f;">
+            <div style="font-size: 48px; margin-bottom: 20px;">📋</div>
+            <h3 style="font-size: 20px; color: #2a9d8f; margin-bottom: 16px; font-weight: 600;">Applicant Tracking</h3>
+            <p style="font-size: 14px; color: rgba(245, 243, 239, 0.6); line-height: 1.6; margin-bottom: 16px;">
+              Integration with ATS platforms for hiring pipeline.
+            </p>
+            <div style="font-size: 13px; color: rgba(245, 243, 239, 0.5);">
+              Greenhouse • Lever • SmartRecruiters • iCIMS
+            </div>
+          </div>
+
+          <!-- LMS -->
+          <div class="glass stagger-item" style="padding: 40px; border-radius: 16px; text-align: center; border-top: 3px solid #d4af37;">
+            <div style="font-size: 48px; margin-bottom: 20px;">📚</div>
+            <h3 style="font-size: 20px; color: #d4af37; margin-bottom: 16px; font-weight: 600;">Learning Management</h3>
+            <p style="font-size: 14px; color: rgba(245, 243, 239, 0.6); line-height: 1.6; margin-bottom: 16px;">
+              Connect with LMS platforms for credential tracking.
+            </p>
+            <div style="font-size: 13px; color: rgba(245, 243, 239, 0.5);">
+              Canvas • Moodle • Blackboard • Cornerstone
+            </div>
+          </div>
+
+          <!-- Data Warehouse -->
+          <div class="glass stagger-item" style="padding: 40px; border-radius: 16px; text-align: center; border-top: 3px solid #2a9d8f;">
+            <div style="font-size: 48px; margin-bottom: 20px;">📊</div>
+            <h3 style="font-size: 20px; color: #2a9d8f; margin-bottom: 16px; font-weight: 600;">Data Warehouses</h3>
+            <p style="font-size: 14px; color: rgba(245, 243, 239, 0.6); line-height: 1.6; margin-bottom: 16px;">
+              Export data to your analytics infrastructure.
+            </p>
+            <div style="font-size: 13px; color: rgba(245, 243, 239, 0.5);">
+              Snowflake • Databricks • BigQuery • Redshift
+            </div>
+          </div>
+
+          <!-- BI Tools -->
+          <div class="glass stagger-item" style="padding: 40px; border-radius: 16px; text-align: center; border-top: 3px solid #d4af37;">
+            <div style="font-size: 48px; margin-bottom: 20px;">📈</div>
+            <h3 style="font-size: 20px; color: #d4af37; margin-bottom: 16px; font-weight: 600;">Business Intelligence</h3>
+            <p style="font-size: 14px; color: rgba(245, 243, 239, 0.6); line-height: 1.6; margin-bottom: 16px;">
+              Native connectors for BI visualization tools.
+            </p>
+            <div style="font-size: 13px; color: rgba(245, 243, 239, 0.5);">
+              Tableau • Power BI • Looker • Metabase
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SCALABILITY -->
+    <section style="padding: 120px 24px;">
+      <div style="max-width: 1100px; margin: 0 auto;">
+        <div style="text-align: center; margin-bottom: 80px;">
+          <span class="section-badge" style="display: inline-block; padding: 8px 20px; background: rgba(42, 157, 143, 0.1); border: 1px solid #2a9d8f; border-radius: 20px; font-size: 14px; font-weight: 600; color: #2a9d8f; margin-bottom: 16px;">PERFORMANCE</span>
+          <h2 class="reveal-text" style="font-size: 48px; font-weight: 700; margin-bottom: 24px;">
+            Built to Scale
+          </h2>
+          <p class="fade-in" style="font-size: 20px; color: rgba(245, 243, 239, 0.7); max-width: 800px; margin: 0 auto;">
+            Auto-scaling infrastructure that grows with your organization. From 1,000 to 1,000,000+ users.
+          </p>
+        </div>
+
+        <div class="glass fade-in" style="padding: 60px; border-radius: 16px; background: linear-gradient(135deg, rgba(42, 157, 143, 0.1) 0%, rgba(212, 175, 55, 0.05) 100%); border: 2px solid rgba(42, 157, 143, 0.2);">
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px;">
+            
+            <div>
+              <h3 style="font-size: 24px; color: #2a9d8f; margin-bottom: 24px; font-weight: 600;">Infrastructure Highlights</h3>
+              <ul style="list-style: none; padding: 0; font-size: 16px; color: rgba(245, 243, 239, 0.7); line-height: 2;">
+                <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                  <span style="color: #2a9d8f; font-size: 20px;">⚡</span> 
+                  <span>Auto-scaling compute and storage</span>
+                </li>
+                <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                  <span style="color: #2a9d8f; font-size: 20px;">🌍</span> 
+                  <span>Global CDN with edge caching</span>
+                </li>
+                <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                  <span style="color: #2a9d8f; font-size: 20px;">💾</span> 
+                  <span>Automated backup and recovery</span>
+                </li>
+                <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                  <span style="color: #2a9d8f; font-size: 20px;">📡</span> 
+                  <span>Load balancing across regions</span>
+                </li>
+                <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                  <span style="color: #2a9d8f; font-size: 20px;">🔄</span> 
+                  <span>Zero-downtime deployments</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 style="font-size: 24px; color: #d4af37; margin-bottom: 24px; font-weight: 600;">Performance Guarantees</h3>
+              <div style="display: flex; flex-direction: column; gap: 20px;">
+                <div style="padding: 20px; background: rgba(0, 0, 0, 0.3); border-radius: 12px; border-left: 3px solid #2a9d8f;">
+                  <div style="font-size: 32px; font-weight: 700; color: #2a9d8f; font-family: 'JetBrains Mono', monospace; margin-bottom: 4px;">99.99%</div>
+                  <div style="font-size: 14px; color: rgba(245, 243, 239, 0.6);">Uptime SLA with redundancy</div>
+                </div>
+                <div style="padding: 20px; background: rgba(0, 0, 0, 0.3); border-radius: 12px; border-left: 3px solid #d4af37;">
+                  <div style="font-size: 32px; font-weight: 700; color: #d4af37; font-family: 'JetBrains Mono', monospace; margin-bottom: 4px;">&lt; 200ms</div>
+                  <div style="font-size: 14px; color: rgba(245, 243, 239, 0.6);">Average API response time</div>
+                </div>
+                <div style="padding: 20px; background: rgba(0, 0, 0, 0.3); border-radius: 12px; border-left: 3px solid #2a9d8f;">
+                  <div style="font-size: 32px; font-weight: 700; color: #2a9d8f; font-family: 'JetBrains Mono', monospace; margin-bottom: 4px;">1M+</div>
+                  <div style="font-size: 14px; color: rgba(245, 243, 239, 0.6);">Concurrent users supported</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUPPORT -->
+    <section style="padding: 120px 24px; background: linear-gradient(180deg, rgba(42, 157, 143, 0.03) 0%, transparent 100%);">
+      <div style="max-width: 1100px; margin: 0 auto;">
+        <div style="text-align: center; margin-bottom: 80px;">
+          <h2 class="reveal-text" style="font-size: 48px; font-weight: 700; margin-bottom: 24px;">
+            Enterprise Support
+          </h2>
+          <p class="fade-in" style="font-size: 20px; color: rgba(245, 243, 239, 0.7); max-width: 800px; margin: 0 auto;">
+            Dedicated support team, custom onboarding, and proactive monitoring for mission-critical deployments.
+          </p>
+        </div>
+
+        <div class="stagger-container" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;">
+          
+          <div class="glass stagger-item" style="padding: 40px; border-radius: 16px; text-align: center;">
+            <div style="font-size: 48px; margin-bottom: 20px;">🎯</div>
+            <h3 style="font-size: 20px; color: #2a9d8f; margin-bottom: 16px; font-weight: 600;">Dedicated CSM</h3>
+            <p style="font-size: 14px; color: rgba(245, 243, 239, 0.6); line-height: 1.6;">
+              Customer Success Manager for strategic guidance and account management.
+            </p>
+          </div>
+
+          <div class="glass stagger-item" style="padding: 40px; border-radius: 16px; text-align: center;">
+            <div style="font-size: 48px; margin-bottom: 20px;">⏱️</div>
+            <h3 style="font-size: 20px; color: #d4af37; margin-bottom: 16px; font-weight: 600;">24/7 Monitoring</h3>
+            <p style="font-size: 14px; color: rgba(245, 243, 239, 0.6); line-height: 1.6;">
+              Real-time system monitoring with proactive incident response and resolution.
+            </p>
+          </div>
+
+          <div class="glass stagger-item" style="padding: 40px; border-radius: 16px; text-align: center;">
+            <div style="font-size: 48px; margin-bottom: 20px;">🚀</div>
+            <h3 style="font-size: 20px; color: #2a9d8f; margin-bottom: 16px; font-weight: 600;">Custom Onboarding</h3>
+            <p style="font-size: 14px; color: rgba(245, 243, 239, 0.6); line-height: 1.6;">
+              Tailored implementation plan, data migration, and team training programs.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section style="padding: 120px 24px;">
+      <div class="glass" style="max-width: 1000px; margin: 0 auto; padding: 80px 60px; border-radius: 24px; text-align: center; background: linear-gradient(135deg, rgba(42, 157, 143, 0.15) 0%, rgba(212, 175, 55, 0.08) 100%); border: 2px solid rgba(42, 157, 143, 0.2);">
+        <h2 style="font-size: 42px; font-weight: 700; margin-bottom: 24px;">Ready for Enterprise-Grade Infrastructure?</h2>
+        <p style="font-size: 20px; color: rgba(245, 243, 239, 0.7); margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto;">
+          Let's discuss your organization's requirements and build a custom deployment plan.
+        </p>
+        
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+          <a href="/contact" class="magnetic-btn" style="display: inline-block; padding: 18px 40px; background: linear-gradient(135deg, #2a9d8f 0%, #1e847a 100%); color: #fff; text-decoration: none; border-radius: 10px; font-weight: 600; font-size: 16px; box-shadow: 0 8px 24px rgba(42, 157, 143, 0.3);">
+            Request Enterprise Demo
+          </a>
+          <a href="/security" class="magnetic-btn" style="display: inline-block; padding: 18px 40px; background: transparent; color: #2a9d8f; text-decoration: none; border-radius: 10px; font-weight: 600; font-size: 16px; border: 2px solid #2a9d8f;">
+            View Security & Compliance
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer style="padding: 60px 24px; border-top: 1px solid rgba(42, 157, 143, 0.1); background: rgba(10, 10, 12, 0.5);">
+    <div style="max-width: 1280px; margin: 0 auto; text-align: center;">
+      <div style="font-size: 24px; font-weight: 700; margin-bottom: 16px;">
+        Seikira <span style="color: rgba(245, 243, 239, 0.4);">by Product Couture</span>
+      </div>
+      <p style="font-size: 14px; color: rgba(245, 243, 239, 0.5);">
+        © 2025 Product Couture. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script src="/static/scroll-animations.js"></script>
+  <script src="/static/sound-effects.js"></script>
+  <script src="/static/page-router.js"></script>
+</body>
+</html>

@@ -13,6 +13,8 @@ cp public/index.html dist/
 cp public/about.html dist/ 2>/dev/null || true
 cp public/contact.html dist/ 2>/dev/null || true
 cp public/product-couture.html dist/ 2>/dev/null || true
+cp public/enterprise.html dist/ 2>/dev/null || true
+cp public/security.html dist/ 2>/dev/null || true
 
 # Copy kinect directory if it exists
 if [ -d "public/kinect" ]; then
