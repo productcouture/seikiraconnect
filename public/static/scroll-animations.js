@@ -325,6 +325,9 @@ class CustomCursor {
   }
 
   init() {
+    // Add class to body to hide default cursor
+    document.body.classList.add('custom-cursor-active');
+    
     // Create cursor elements
     this.cursor = document.createElement('div');
     this.cursor.className = 'custom-cursor';

@@ -512,6 +512,14 @@ body {
    ============================================ */
 
 /* Custom Cursor */
+body.custom-cursor-active {
+  cursor: none !important;
+}
+
+body.custom-cursor-active * {
+  cursor: none !important;
+}
+
 .custom-cursor {
   position: fixed;
   width: 10px;
