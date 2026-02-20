@@ -10,6 +10,15 @@ mkdir -p dist
 # Copy HTML files
 echo "📄 Copying HTML files..."
 cp public/index.html dist/
+cp public/about.html dist/ 2>/dev/null || true
+cp public/contact.html dist/ 2>/dev/null || true
+cp public/product-couture.html dist/ 2>/dev/null || true
+
+# Copy kinect directory if it exists
+if [ -d "public/kinect" ]; then
+  echo "📁 Copying kinect directory..."
+  cp -r public/kinect dist/
+fi
 
 # Copy static assets
 echo "📦 Copying static assets..."
