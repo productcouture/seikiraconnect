@@ -393,6 +393,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize custom cursor (desktop only)
   if (window.innerWidth > 1024) {
     window.customCursor = new CustomCursor();
+    console.log('✨ Custom cursor initialized (window width:', window.innerWidth + 'px)');
+  } else {
+    console.log('ℹ️ Custom cursor disabled (window width:', window.innerWidth + 'px, need > 1024px)');
   }
 
   console.log('🎨 Advanced scroll animations initialized');
