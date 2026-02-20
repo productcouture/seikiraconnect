@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seikira | Workforce Intelligence Infrastructure</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css">
+  
+  <style>
+    /* Advanced Tech-Savvy Styles */
+    :root {
+      --gradient-primary: linear-gradient(135deg, #0a192f 0%, #112240 100%);
+      --gradient-accent: linear-gradient(135deg, #2a9d8f 0%, #1e847a 100%);
+      --gradient-gold: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
+      --glow-teal: 0 0 20px rgba(42, 157, 143, 0.5);
+      --glow-gold: 0 0 20px rgba(212, 175, 55, 0.5);
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    
+    /* Glassmorphism */
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    /* Advanced Hero */
+    .hero-advanced {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: #0a0a0c;
+    }
+    
+    .hero-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 20px;
+      background: rgba(42, 157, 143, 0.1);
+      border: 1px solid rgba(42, 157, 143, 0.3);
+      border-radius: 100px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #2a9d8f;
+      margin-bottom: 32px;
+      animation: fadeSlideUp 0.8s ease-out 0.2s both;
+    }
+    
+    .hero-badge::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: #2a9d8f;
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    
+    .hero-headline {
+      font-size: clamp(2.5rem, 7vw, 5.5rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 24px;
+      background: linear-gradient(135deg, #ffffff 0%, rgba(255, 255, 255, 0.7) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: fadeSlideUp 0.8s ease-out 0.4s both;
+    }
+    
+    .hero-headline span {
+      background: linear-gradient(135deg, #2a9d8f 0%, #1e847a 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: var(--glow-teal);
+    }
+    
+    .hero-subtext {
+      font-size: clamp(1rem, 2vw, 1.5rem);
+      line-height: 1.6;
+      color: rgba(245, 243, 239, 0.7);
+      max-width: 800px;
+      margin: 0 auto 48px;
+      animation: fadeSlideUp 0.8s ease-out 0.6s both;
+    }
+    
+    .hero-ctas {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 80px;
+      animation: fadeSlideUp 0.8s ease-out 0.8s both;
+    }
+    
+    .btn-advanced {
+      padding: 16px 40px;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .btn-primary {
+      background: var(--gradient-accent);
+      color: white;
+      border: none;
+      box-shadow: 0 4px 20px rgba(42, 157, 143, 0.3);
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(42, 157, 143, 0.5);
+    }
+    
+    .btn-secondary {
+      background: transparent;
+      color: #2a9d8f;
+      border: 2px solid #2a9d8f;
+    }
+    
+    .btn-secondary:hover {
+      background: rgba(42, 157, 143, 0.1);
+      transform: translateY(-2px);
+    }
+    
+    .tech-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+      max-width: 900px;
+      margin: 0 auto;
+      animation: fadeSlideUp 0.8s ease-out 1s both;
+    }
+    
+    .tech-stat {
+      text-align: center;
+    }
+    
+    .tech-stat__value {
+      font-family: var(--font-mono);
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #2a9d8f;
+      margin-bottom: 8px;
+      text-shadow: var(--glow-teal);
+    }
+    
+    .tech-stat__label {
+      font-size: 0.875rem;
+      color: rgba(245, 243, 239, 0.6);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    
+    /* Tech Cards */
+    .tech-section {
+      padding: 120px 0;
+      position: relative;
+    }
+    
+    .tech-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, rgba(42, 157, 143, 0.3) 50%, transparent 100%);
+    }
+    
+    .section-header {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 80px;
+    }
+    
+    .section-badge {
+      display: inline-block;
+      padding: 6px 16px;
+      background: rgba(42, 157, 143, 0.1);
+      border: 1px solid rgba(42, 157, 143, 0.3);
+      border-radius: 100px;
+      font-size: 0.6875rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #2a9d8f;
+      margin-bottom: 20px;
+    }
+    
+    .section-title {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 24px;
+      background: linear-gradient(135deg, #ffffff 0%, rgba(255, 255, 255, 0.7) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .section-description {
+      font-size: 1.125rem;
+      line-height: 1.7;
+      color: rgba(245, 243, 239, 0.7);
+    }
+    
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .tech-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      padding: 40px;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .tech-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--gradient-accent);
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+    }
+    
+    .tech-card:hover::before {
+      transform: scaleX(1);
+    }
+    
+    .tech-card:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(42, 157, 143, 0.3);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 60px rgba(42, 157, 143, 0.2);
+    }
+    
+    .tech-card__icon {
+      width: 60px;
+      height: 60px;
+      background: rgba(42, 157, 143, 0.1);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      font-size: 1.75rem;
+      transition: all 0.4s ease;
+    }
+    
+    .tech-card:hover .tech-card__icon {
+      background: var(--gradient-accent);
+      transform: scale(1.1) rotate(5deg);
+    }
+    
+    .tech-card__number {
+      font-family: var(--font-mono);
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #2a9d8f;
+      margin-bottom: 16px;
+    }
+    
+    .tech-card__title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+    
+    .tech-card__description {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: rgba(245, 243, 239, 0.7);
+      margin-bottom: 24px;
+    }
+    
+    .tech-card__features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    
+    .tech-card__features li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.875rem;
+      color: rgba(245, 243, 239, 0.6);
+    }
+    
+    .tech-card__features li::before {
+      content: '→';
+      color: #2a9d8f;
+      font-weight: 700;
+    }
+    
+    /* Terminal Window */
+    .terminal-window {
+      background: #0d1117;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      overflow: hidden;
+      max-width: 800px;
+      margin: 80px auto;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    }
+    
+    .terminal-header {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .terminal-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+    
+    .terminal-dot:nth-child(1) { background: #ff5f56; }
+    .terminal-dot:nth-child(2) { background: #ffbd2e; }
+    .terminal-dot:nth-child(3) { background: #27c93f; }
+    
+    .terminal-body {
+      padding: 24px;
+      font-family: var(--font-mono);
+      font-size: 0.875rem;
+      line-height: 1.8;
+      color: #8b949e;
+    }
+    
+    .terminal-body code {
+      color: #58a6ff;
+    }
+    
+    .terminal-body .comment {
+      color: #8b949e;
+    }
+    
+    .terminal-body .success {
+      color: #3fb950;
+    }
+    
+    /* Network Visualization */
+    .network-container {
+      max-width: 1000px;
+      margin: 80px auto;
+      padding: 60px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      position: relative;
+    }
+    
+    .network-svg {
+      width: 100%;
+      height: 400px;
+    }
+    
+    /* Metrics Dashboard */
+    .metrics-dashboard {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      max-width: 1200px;
+      margin: 80px auto;
+    }
+    
+    .metric-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      padding: 32px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    
+    .metric-card:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(42, 157, 143, 0.3);
+      transform: translateY(-4px);
+    }
+    
+    .metric-card__icon {
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+    }
+    
+    .metric-card__value {
+      font-family: var(--font-mono);
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #2a9d8f;
+      margin-bottom: 12px;
+      text-shadow: var(--glow-teal);
+    }
+    
+    .metric-card__label {
+      font-size: 0.9375rem;
+      color: rgba(245, 243, 239, 0.6);
+      line-height: 1.5;
+    }
+    
+    /* Comparison Table */
+    .comparison-table {
+      max-width: 900px;
+      margin: 80px auto;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    
+    .comparison-row {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 24px;
+      padding: 24px 32px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.3s ease;
+    }
+    
+    .comparison-row:last-child {
+      border-bottom: none;
+    }
+    
+    .comparison-row:hover {
+      background: rgba(255, 255, 255, 0.03);
+    }
+    
+    .comparison-row__brand {
+      font-weight: 600;
+      color: rgba(245, 243, 239, 0.9);
+    }
+    
+    .comparison-row__scope {
+      color: rgba(245, 243, 239, 0.6);
+    }
+    
+    .comparison-highlight {
+      background: rgba(42, 157, 143, 0.1);
+      border: 2px solid #2a9d8f;
+    }
+    
+    .comparison-highlight .comparison-row__brand {
+      color: #2a9d8f;
+      font-size: 1.125rem;
+    }
+    
+    /* CTA Section */
+    .cta-advanced {
+      padding: 120px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .cta-advanced::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 800px;
+      height: 100%;
+      background: radial-gradient(ellipse at center, rgba(42, 157, 143, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    
+    .cta-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .cta-title {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 24px;
+      background: linear-gradient(135deg, #ffffff 0%, rgba(255, 255, 255, 0.7) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .cta-description {
+      font-size: 1.25rem;
+      line-height: 1.7;
+      color: rgba(245, 243, 239, 0.7);
+      margin-bottom: 48px;
+    }
+    
+    .cta-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-headline {
+        font-size: 2.5rem;
+      }
+      
+      .tech-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .tech-stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .comparison-row {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      
+      .terminal-window {
+        margin: 40px 0;
+      }
+      
+      .network-container {
+        padding: 30px;
+        margin: 40px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="/" class="logo">Seikira</a>
+        <nav class="nav">
+          <ul class="nav__links">
+            <li><a href="/product-couture" class="nav__link">Product Couture</a></li>
+            <li><a href="#platform" class="nav__link">Platform</a></li>
+            <li><a href="#architecture" class="nav__link">Architecture</a></li>
+            <li><a href="#outcomes" class="nav__link">Outcomes</a></li>
+            <li><a href="#contact" class="nav__link">Contact</a></li>
+          </ul>
+          <a href="#contact" class="btn btn--outline">Request Demo</a>
+          <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <div class="overlay" id="overlay"></div>
+  <nav class="mobile-nav" id="mobileNav">
+    <button class="mobile-nav__close" id="mobileNavClose">&times;</button>
+    <ul class="mobile-nav__links">
+      <li><a href="/product-couture" class="mobile-nav__link">Product Couture</a></li>
+      <li><a href="#platform" class="mobile-nav__link">Platform</a></li>
+      <li><a href="#architecture" class="mobile-nav__link">Architecture</a></li>
+      <li><a href="#outcomes" class="mobile-nav__link">Outcomes</a></li>
+      <li><a href="#contact" class="mobile-nav__link">Contact</a></li>
+    </ul>
+    <div class="mobile-nav__cta">
+      <a href="#contact" class="btn btn--solid">Request Demo</a>
+    </div>
+  </nav>
+
+  <!-- Advanced Hero -->
+  <section class="hero-advanced">
+    <canvas class="hero-canvas" id="particle-canvas"></canvas>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span>Workforce Intelligence Infrastructure</span>
+        </div>
+        <h1 class="hero-headline hero-headline-glitch">
+          The Operating System for<br>
+          <span>Economic Mobility</span>
+        </h1>
+        <p class="hero-subtext">
+          The workforce system is fragmented. <strong>Seikira connects it.</strong><br>
+          Barrier-aware AI · Employer-aligned pathways · Predictive retention analytics
+        </p>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn-advanced btn-primary">Request Enterprise Access</a>
+          <a href="#platform" class="btn-advanced btn-secondary">Explore Platform</a>
+        </div>
+        <div class="tech-stats">
+          <div class="tech-stat">
+            <div class="tech-stat__value" data-metric="500000" data-suffix="+">0+</div>
+            <div class="tech-stat__label">Professionals Tracked</div>
+          </div>
+          <div class="tech-stat">
+            <div class="tech-stat__value" data-metric="95" data-suffix="%">0%</div>
+            <div class="tech-stat__label">Retention Prediction Accuracy</div>
+          </div>
+          <div class="tech-stat">
+            <div class="tech-stat__value" data-metric="90" data-suffix="">0</div>
+            <div class="tech-stat__label">Day Forecast Window</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Platform Architecture Section -->
+  <section class="tech-section" id="platform">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Platform Architecture</span>
+        <h2 class="section-title">Seikira Kinect</h2>
+        <p class="section-description">
+          Multi-tenant workforce intelligence platform connecting the entire economic mobility lifecycle
+        </p>
+      </div>
+
+      <div class="tech-grid">
+        <div class="tech-card feature-card-3d animate-on-scroll">
+          <div class="tech-card__icon">🧠</div>
+          <div class="tech-card__number">#01</div>
+          <h3 class="tech-card__title">Barrier-Aware Readiness Scoring</h3>
+          <p class="tech-card__description">
+            AI-powered assessment engine that quantifies workforce readiness while accounting for systemic barriers
+          </p>
+          <ul class="tech-card__features">
+            <li>Structured multi-dimensional assessments</li>
+            <li>Dynamic stabilization tracking</li>
+            <li>AI-adjusted mobility modeling</li>
+            <li>Real-time readiness indexing</li>
+          </ul>
+        </div>
+
+        <div class="tech-card feature-card-3d animate-on-scroll">
+          <div class="tech-card__icon">🎓</div>
+          <div class="tech-card__number">#02</div>
+          <h3 class="tech-card__title">Modular Credential Ecosystems</h3>
+          <p class="tech-card__description">
+            Stackable, employer-aligned pathways with verifiable outcome tracking
+          </p>
+          <ul class="tech-card__features">
+            <li>Micro-credential architecture</li>
+            <li>Employer demand alignment</li>
+            <li>Blockchain-verified credentials</li>
+            <li>Competency-based progression</li>
+          </ul>
+        </div>
+
+        <div class="tech-card feature-card-3d animate-on-scroll">
+          <div class="tech-card__icon">📊</div>
+          <div class="tech-card__number">#03</div>
+          <h3 class="tech-card__title">Employer Risk-Reduction Layer</h3>
+          <p class="tech-card__description">
+            Predictive hiring intelligence that reduces risk and improves retention
+          </p>
+          <ul class="tech-card__features">
+            <li>90-day retention forecasting</li>
+            <li>Skill alignment scoring</li>
+            <li>Cultural fit prediction</li>
+            <li>Performance trajectory modeling</li>
+          </ul>
+        </div>
+
+        <div class="tech-card feature-card-3d animate-on-scroll">
+          <div class="tech-card__icon">📈</div>
+          <div class="tech-card__number">#04</div>
+          <h3 class="tech-card__title">Mobility & Impact Analytics</h3>
+          <p class="tech-card__description">
+            Comprehensive dashboards tracking cohort outcomes and wage progression
+          </p>
+          <ul class="tech-card__features">
+            <li>Cohort performance dashboards</li>
+            <li>Longitudinal wage tracking</li>
+            <li>Retention heat mapping</li>
+            <li>Regional impact rollups</li>
+          </ul>
+        </div>
+
+        <div class="tech-card feature-card-3d animate-on-scroll">
+          <div class="tech-card__icon">🏗️</div>
+          <div class="tech-card__number">#05</div>
+          <h3 class="tech-card__title">Enterprise Infrastructure</h3>
+          <p class="tech-card__description">
+            SOC 2-aligned architecture with hierarchical tenancy and API-first design
+          </p>
+          <ul class="tech-card__features">
+            <li>Multi-tenant isolation</li>
+            <li>RESTful API architecture</li>
+            <li>SSO/SAML integration</li>
+            <li>SOC 2 Type II compliance</li>
+          </ul>
+        </div>
+
+        <div class="tech-card feature-card-3d animate-on-scroll">
+          <div class="tech-card__icon">🤖</div>
+          <div class="tech-card__number">#06</div>
+          <h3 class="tech-card__title">AI-Powered Matching</h3>
+          <p class="tech-card__description">
+            Machine learning algorithms connecting talent to opportunity with precision
+          </p>
+          <ul class="tech-card__features">
+            <li>Natural language processing</li>
+            <li>Semantic skill matching</li>
+            <li>Bias mitigation algorithms</li>
+            <li>Continuous model improvement</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Code Terminal Demo -->
+  <section class="tech-section">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Developer-First</span>
+        <h2 class="section-title">API-First Architecture</h2>
+        <p class="section-description">
+          Built for seamless integration with your existing workforce systems
+        </p>
+      </div>
+
+      <div class="terminal-window animate-on-scroll">
+        <div class="terminal-header">
+          <div class="terminal-dot"></div>
+          <div class="terminal-dot"></div>
+          <div class="terminal-dot"></div>
+        </div>
+        <div class="terminal-body">
+          <pre id="code-terminal"></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Network Visualization -->
+  <section class="tech-section" id="architecture">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Mobility Lifecycle</span>
+        <h2 class="section-title">Connecting Every Stage</h2>
+        <p class="section-description">
+          The first platform to connect stability through wage growth in a unified intelligence layer
+        </p>
+      </div>
+
+      <div class="network-container animate-on-scroll">
+        <svg class="network-svg" id="network-diagram" viewBox="0 0 400 200">
+          <!-- SVG will be populated by JavaScript -->
+        </svg>
+      </div>
+
+      <div style="text-align: center; margin-top: 40px;">
+        <p style="font-family: var(--font-mono); font-size: 1.25rem; color: #2a9d8f; font-weight: 600;">
+          Stability → Skill → Credential → Match → Retention → Growth
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Section -->
+  <section class="tech-section">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Differentiation</span>
+        <h2 class="section-title">Most Platforms Solve One Stage</h2>
+        <p class="section-description">
+          Seikira connects the entire mobility lifecycle
+        </p>
+      </div>
+
+      <div class="comparison-table animate-on-scroll">
+        <div class="comparison-row">
+          <div class="comparison-row__brand">Coursera</div>
+          <div class="comparison-row__scope">→ Education & Skill Development</div>
+        </div>
+        <div class="comparison-row">
+          <div class="comparison-row__brand">Indeed</div>
+          <div class="comparison-row__scope">→ Job Listings & Application Management</div>
+        </div>
+        <div class="comparison-row">
+          <div class="comparison-row__brand">Guild</div>
+          <div class="comparison-row__scope">→ Employer-Sponsored Learning Programs</div>
+        </div>
+        <div class="comparison-row">
+          <div class="comparison-row__brand">LinkedIn Learning</div>
+          <div class="comparison-row__scope">→ Professional Development Content</div>
+        </div>
+        <div class="comparison-row comparison-highlight">
+          <div class="comparison-row__brand">Seikira Kinect</div>
+          <div class="comparison-row__scope">
+            <strong>→ End-to-End Workforce Intelligence Infrastructure</strong><br>
+            Stability · Skill · Credential · Match · Retention · Growth
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 60px;">
+        <div style="display: inline-flex; gap: 16px; flex-wrap: wrap; justify-content: center;">
+          <span style="padding: 12px 24px; background: rgba(42, 157, 143, 0.1); border: 1px solid #2a9d8f; border-radius: 8px; font-weight: 600; color: #2a9d8f;">Defensible</span>
+          <span style="padding: 12px 24px; background: rgba(42, 157, 143, 0.1); border: 1px solid #2a9d8f; border-radius: 8px; font-weight: 600; color: #2a9d8f;">Scalable</span>
+          <span style="padding: 12px 24px; background: rgba(42, 157, 143, 0.1); border: 1px solid #2a9d8f; border-radius: 8px; font-weight: 600; color: #2a9d8f;">Infrastructure</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Outcomes Dashboard -->
+  <section class="tech-section" id="outcomes">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Measurable Impact</span>
+        <h2 class="section-title">From Placement to Sustained Growth</h2>
+        <p class="section-description">
+          Real outcomes, tracked longitudinally across the mobility lifecycle
+        </p>
+      </div>
+
+      <div class="metrics-dashboard">
+        <div class="metric-card animate-on-scroll">
+          <div class="metric-card__icon">📈</div>
+          <div class="metric-card__value" data-metric="43" data-suffix="%">0%</div>
+          <div class="metric-card__label">Higher Completion Rates vs. Traditional Training</div>
+        </div>
+
+        <div class="metric-card animate-on-scroll">
+          <div class="metric-card__icon">🎯</div>
+          <div class="metric-card__value" data-metric="67" data-suffix="%">0%</div>
+          <div class="metric-card__label">Reduction in Hiring Risk with Predictive Scoring</div>
+        </div>
+
+        <div class="metric-card animate-on-scroll">
+          <div class="metric-card__icon">🔄</div>
+          <div class="metric-card__value" data-metric="58" data-suffix="%">0%</div>
+          <div class="metric-card__label">Improvement in 90-Day Retention</div>
+        </div>
+
+        <div class="metric-card animate-on-scroll">
+          <div class="metric-card__icon">💰</div>
+          <div class="metric-card__value" data-metric="28" data-suffix="%">0%</div>
+          <div class="metric-card__label">Average Wage Progression (Year 1)</div>
+        </div>
+
+        <div class="metric-card animate-on-scroll">
+          <div class="metric-card__icon">⚡</div>
+          <div class="metric-card__value" data-metric="92" data-suffix="%">0%</div>
+          <div class="metric-card__label">Real-Time Data Accuracy</div>
+        </div>
+
+        <div class="metric-card animate-on-scroll">
+          <div class="metric-card__icon">🌍</div>
+          <div class="metric-card__value" data-metric="50" data-suffix="+">0+</div>
+          <div class="metric-card__label">Regional Workforce Boards Deployed</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vision Statement -->
+  <section class="tech-section">
+    <div class="container">
+      <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+        <div class="section-header animate-on-scroll">
+          <span class="section-badge">Our Mission</span>
+          <h2 class="section-title">We Don't Just Train Talent</h2>
+        </div>
+        
+        <div style="font-size: 1.25rem; line-height: 2; color: rgba(245, 243, 239, 0.7); margin-bottom: 48px;" class="animate-on-scroll">
+          <p style="margin-bottom: 16px;">We <strong style="color: #2a9d8f;">quantify readiness</strong>.</p>
+          <p style="margin-bottom: 16px;">We <strong style="color: #2a9d8f;">reduce hiring risk</strong>.</p>
+          <p style="margin-bottom: 16px;">We <strong style="color: #2a9d8f;">predict retention</strong>.</p>
+          <p style="margin-bottom: 16px;">We <strong style="color: #2a9d8f;">measure mobility</strong>.</p>
+        </div>
+
+        <div style="font-size: 1.5rem; font-weight: 600; color: #2a9d8f; margin-top: 60px;" class="animate-on-scroll">
+          Seikira is the operating system for economic mobility<br>in underserved communities.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="cta-advanced" id="contact">
+    <div class="container">
+      <div class="cta-content">
+        <h2 class="cta-title animate-on-scroll">
+          Ready to Modernize Workforce Development?
+        </h2>
+        <p class="cta-description animate-on-scroll">
+          Partner with the platform connecting the entire economic mobility lifecycle
+        </p>
+        <div class="cta-buttons animate-on-scroll">
+          <a href="#" class="btn-advanced btn-primary">Request Enterprise Access</a>
+          <a href="#" class="btn-advanced btn-secondary">Schedule Strategic Demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Data & Analytics Section -->
+  <section id="data-analytics" class="section-spacing fade-in">
+    <div class="container-custom">
+      <div class="section-header" style="text-align: center; margin-bottom: 60px;">
+        <h2 class="reveal-text" style="font-size: 42px; margin-bottom: 16px; background: linear-gradient(135deg, #2a9d8f 0%, #d4af37 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+          Real-Time Impact Analytics
+        </h2>
+        <p class="slide-left" style="font-size: 18px; color: rgba(245, 243, 239, 0.7); max-width: 700px; margin: 0 auto;">
+          Data-driven insights that prove program efficacy and demonstrate measurable workforce outcomes
+        </p>
+      </div>
+
+      <!-- Main Charts Grid -->
+      <div class="stagger-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); gap: 32px; margin-bottom: 48px;">
+        
+        <!-- Retention Chart -->
+        <div class="glass slide-left stagger-item" style="padding: 32px; border-radius: 16px; position: relative; overflow: hidden;">
+          <div style="height: 350px;">
+            <canvas id="retentionChart"></canvas>
+          </div>
+          <p style="margin-top: 16px; font-size: 14px; color: rgba(245, 243, 239, 0.6); text-align: center;">
+            90-day retention: <strong style="color: #2a9d8f;">2x industry average</strong>
+          </p>
+        </div>
+
+        <!-- Wage Growth Chart -->
+        <div class="glass slide-right stagger-item" style="padding: 32px; border-radius: 16px; position: relative; overflow: hidden;">
+          <div style="height: 350px;">
+            <canvas id="wageGrowthChart"></canvas>
+          </div>
+          <p style="margin-top: 16px; font-size: 14px; color: rgba(245, 243, 239, 0.6); text-align: center;">
+            Average wage increase: <strong style="color: #2a9d8f;">+113% in 24 months</strong>
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Secondary Charts Grid -->
+      <div class="stagger-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 32px; margin-bottom: 48px;">
+        
+        <!-- Completion Rate Chart -->
+        <div class="glass fade-in stagger-item" style="padding: 32px; border-radius: 16px; position: relative; overflow: hidden;">
+          <div style="height: 320px;">
+            <canvas id="completionChart"></canvas>
+          </div>
+        </div>
+
+        <!-- Skill Alignment Chart -->
+        <div class="glass fade-in stagger-item" style="padding: 32px; border-radius: 16px; position: relative; overflow: hidden;">
+          <div style="height: 320px;">
+            <canvas id="skillAlignmentChart"></canvas>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Tertiary Charts Grid -->
+      <div class="stagger-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 32px;">
+        
+        <!-- Cohort Analytics Chart -->
+        <div class="glass fade-in stagger-item" style="padding: 32px; border-radius: 16px; position: relative; overflow: hidden;">
+          <div style="height: 320px;">
+            <canvas id="cohortChart"></canvas>
+          </div>
+        </div>
+
+        <!-- Impact Metrics Chart -->
+        <div class="glass fade-in stagger-item" style="padding: 32px; border-radius: 16px; position: relative; overflow: hidden;">
+          <div style="height: 320px;">
+            <canvas id="impactChart"></canvas>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Data Insights Cards -->
+      <div class="stagger-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin-top: 48px;">
+        
+        <div class="glass fade-in stagger-item" style="padding: 24px; border-radius: 12px; text-align: center; border-left: 3px solid #2a9d8f;">
+          <div style="font-size: 36px; font-weight: 700; color: #2a9d8f; font-family: 'JetBrains Mono', monospace;" class="counter-animate" data-target="92" data-suffix="%" data-duration="2000">0%</div>
+          <p style="font-size: 14px; color: rgba(245, 243, 239, 0.7); margin-top: 8px;">Employer Satisfaction Rate</p>
+        </div>
+
+        <div class="glass fade-in stagger-item" style="padding: 24px; border-radius: 12px; text-align: center; border-left: 3px solid #d4af37;">
+          <div style="font-size: 36px; font-weight: 700; color: #d4af37; font-family: 'JetBrains Mono', monospace;" class="counter-animate" data-target="3.2" data-suffix="x" data-duration="2000" data-decimals="1">0x</div>
+          <p style="font-size: 14px; color: rgba(245, 243, 239, 0.7); margin-top: 8px;">ROI for Training Programs</p>
+        </div>
+
+        <div class="glass fade-in stagger-item" style="padding: 24px; border-radius: 12px; text-align: center; border-left: 3px solid #2a9d8f;">
+          <div style="font-size: 36px; font-weight: 700; color: #2a9d8f; font-family: 'JetBrains Mono', monospace;" class="counter-animate" data-target="78" data-suffix="%" data-duration="2000">0%</div>
+          <p style="font-size: 14px; color: rgba(245, 243, 239, 0.7); margin-top: 8px;">Participants from Underserved Communities</p>
+        </div>
+
+        <div class="glass fade-in stagger-item" style="padding: 24px; border-radius: 12px; text-align: center; border-left: 3px solid #d4af37;">
+          <div style="font-size: 36px; font-weight: 700; color: #d4af37; font-family: 'JetBrains Mono', monospace;" class="counter-animate" data-target="45" data-suffix=" days" data-duration="2000">0 days</div>
+          <p style="font-size: 14px; color: rgba(245, 243, 239, 0.7); margin-top: 8px;">Average Time to Employment</p>
+        </div>
+
+      </div>
+
+      <!-- Call-to-Action -->
+      <div class="fade-in" style="text-align: center; margin-top: 64px;">
+        <h3 style="font-size: 28px; margin-bottom: 16px; color: #f5f3ef;">See Your Program's Potential Impact</h3>
+        <p style="font-size: 16px; color: rgba(245, 243, 239, 0.7); margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto;">
+          Schedule a demo to see how Seikira's analytics platform can transform your workforce development outcomes
+        </p>
+        <a href="#contact" class="cta-button magnetic-btn" style="display: inline-block; padding: 16px 48px; background: linear-gradient(135deg, #2a9d8f 0%, #1e847a 100%); color: #fff; text-decoration: none; border-radius: 8px; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 4px 20px rgba(42, 157, 143, 0.3);">
+          Request Analytics Demo
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <span class="footer__logo">Seikira by Product Couture</span>
+        <span class="footer__copy">© 2025 Product Couture. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress"></div>
+  
+  <!-- Chart.js Library -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  
+  <script src="/static/main.js"></script>
+  <script src="/static/seikira-advanced.js"></script>
+  <script src="/static/scroll-animations.js"></script>
+  <script src="/static/data-viz.js"></script>
+  <script src="/static/sound-effects.js"></script>
+</body>
+</html>
